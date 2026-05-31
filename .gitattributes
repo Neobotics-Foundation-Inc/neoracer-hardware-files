@@ -1,0 +1,6 @@
+# Large binary CAD assets are stored with Git LFS so the repo stays clonable.
+*.stl   filter=lfs diff=lfs merge=lfs -text
+*.step  filter=lfs diff=lfs merge=lfs -text
+*.stp   filter=lfs diff=lfs merge=lfs -text
+*.dwg   filter=lfs diff=lfs merge=lfs -text
+*.FCStd filter=lfs diff=lfs merge=lfs -text
