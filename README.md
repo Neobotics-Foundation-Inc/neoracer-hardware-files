@@ -52,7 +52,7 @@ The OSCORE board is the NeoRacer's custom electronics, a power-distribution and 
 
 ## The four formats
 
-Each format does one job well. The repository ships all four because a single file cannot be both the editable source and a print-ready mesh at the same time, so the design is exported into the format that fits each use.
+The repository ships all four formats because a single file cannot be both the editable source and a print-ready mesh at the same time, so the design is exported into the format that fits each use.
 
 | Format | Role | What you do with it |
 | --- | --- | --- |
