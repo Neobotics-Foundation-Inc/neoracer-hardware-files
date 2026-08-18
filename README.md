@@ -50,6 +50,17 @@ The OSCORE board is the NeoRacer's custom electronics, a power-distribution and 
 | `neoracer-oscore-board-back.png` | PNG | 0.9 MB | A render of the back of the board. |
 | `neoracer-oscore-board-interface.png` | PNG | 1.3 MB | The annotated interface map: every connector and what it is for. |
 
+## The four formats
+
+The repository ships all four formats because a single file cannot be both the editable source and a print-ready mesh at the same time, so the design is exported into the format that fits each use.
+
+| Format | Role | What you do with it |
+| --- | --- | --- |
+| FreeCAD | Editable master | Open it to change geometry, add a mount, or re-export. This is the real source. |
+| STEP | Neutral CAD interchange | Import it into almost any CAD tool without losing the solid model. Good for measuring or referencing. |
+| STL | Printable mesh | Drop it straight into a slicer to 3D print the part. A mesh describes a shape as a surface of many small triangles rather than as a solid model with editable dimensions, so it carries geometry only and no editing history. |
+| DWG | 2D drawing | A flat technical drawing of the vehicle, for dimensions and reference. |
+
 ## Picking the right file
 
 - You want to redesign the car: open `neoracer-full-vehicle.FCStd`.
