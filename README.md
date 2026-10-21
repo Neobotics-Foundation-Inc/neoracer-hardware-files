@@ -2,7 +2,7 @@
 
 This repository holds the open hardware for the NeoRacer, the 1/10 scale autonomous racing car built by the Neobotics Foundation. Everything you need to understand, modify, or print the car lives here: the master CAD project, neutral exchange formats for any CAD tool, a 2D drawing, the parts that you print yourself, and the open electrical documents for the OSCORE power and control board.
 
-If you just want to print the parts, jump to [3d-printed-parts](3d-printed-parts/). If you want to open the whole car and change it, start with the FreeCAD project in [full-vehicle](full-vehicle/). If you want the electronics, the schematic and hardware manual are in [oscore-board](oscore-board/).
+If you just want to print the parts, jump to [3d-printed-parts](3d-printed-parts/). If you want to open the whole car and change it, start with the FreeCAD project in [full-vehicle](full-vehicle/). If you want the electronics, the schematic and hardware manual are in [oscore-board](oscore-board/). If you want the specs of a bought part, like the drive motor, look in [datasheets](datasheets/).
 
 ## Before you clone
 
@@ -17,7 +17,7 @@ If you already cloned without LFS, run `git lfs pull` inside the repo to fetch t
 
 ## What is in here
 
-The files are split into three folders. `full-vehicle` is the complete car. `3d-printed-parts` is the subset you fabricate yourself. `oscore-board` is the custom electronics, the OSCORE power and control board. Every file name starts with `neoracer-` so it still tells you what it is after you download it on its own.
+The files are split into folders. `full-vehicle` is the complete car. `3d-printed-parts` is the subset you fabricate yourself. `oscore-board` is the custom electronics, the OSCORE power and control board. `datasheets` holds the manufacturers' datasheets for the parts the car is built from. Every file name starts with `neoracer-` so it still tells you what it is after you download it on its own.
 
 ### full-vehicle/ (the whole NeoRacer)
 
@@ -50,6 +50,14 @@ The OSCORE board is the NeoRacer's custom electronics, a power-distribution and 
 | `neoracer-oscore-board-back.png` | PNG | 0.9 MB | A render of the back of the board. |
 | `neoracer-oscore-board-interface.png` | PNG | 1.3 MB | The annotated interface map: every connector and what it is for. |
 
+### datasheets/ (the parts the car is built from)
+
+These are the manufacturers' own documents for parts the NeoRacer uses, kept here so the specs are in one place.
+
+| File | Format | Size | What it is |
+| --- | --- | --- | --- |
+| `neoracer-drive-motor-osr-m545neo-datasheet.pdf` | PDF | 0.5 MB | The drive motor, the OSRBOT OSR-M545NEO: a 12 V brushed DC motor with a 1024-line magnetic encoder. 11,000 rpm with no load, 32 W rated and 58 W peak, 207 mN·m and 21 A at stall. Also the speed, current, power and efficiency curves, the encoder pinout, and the mounting drawing. Product manual v1.0, June 2026. |
+
 ## The four formats
 
 The repository ships all four formats because a single file cannot be both the editable source and a print-ready mesh at the same time, so the design is exported into the format that fits each use.
@@ -70,6 +78,7 @@ The repository ships all four formats because a single file cannot be both the e
 - You need 2D dimensions: open `neoracer-full-vehicle-drawing.dwg`.
 - You want to understand the electronics: open `oscore-board/neoracer-oscore-schematic.pdf`, then the `oscore-board/neoracer-oscore-hardware-manual.pdf`.
 - You are designing an enclosure or checking fit around the board: open `oscore-board/neoracer-oscore-board.step`.
+- You need the drive motor's specs or its encoder wiring: open `datasheets/neoracer-drive-motor-osr-m545neo-datasheet.pdf`.
 
 ## A note on versions
 
